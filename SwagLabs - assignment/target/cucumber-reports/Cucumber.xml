@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="110.307" tests="11" skipped="0" failures="3" errors="0">
+<testcase classname="User Login" name="Successful login with valid credentials" time="6.178">
+<system-out><![CDATA[
+When I launch the app and I use the standard user...........................passed
+And I click the log in button...............................................passed
+Then I should be successfully logged in and I should see the product header.passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Successful login with invalid credentials" time="9.368">
+<system-out><![CDATA[
+When I launch the app and I use the locked user.............................passed
+And I click the log in button...............................................passed
+When I should not be successfully logged in and I should not be able to see the product header.passed
+Then I should see a an error message about the locked account...............passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Successful login with invalid credentials - problematic account" time="3.714">
+<failure type="java.lang.AssertionError" message="The card should be visible after successful login.">
+<![CDATA[java.lang.AssertionError: The card should be visible after successful login.
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at stepDefinitions.LoginSteps.testUnsuccessfullyLogin(LoginSteps.java:31)
+	at ✽.I should not be successfully logged in and I should not be able to see the product header(file:///C:/Users/a932987/Downloads/sample-app-mobile-2.7.1/sample-app-mobile-2.7.1/Betsson_assignment_18_1_25/src/test/java/features/01_login.feature:25)
+]]>
+</failure>
+<system-out><![CDATA[
+When I launch the app and I use the problematic user........................passed
+And I click the log in button...............................................passed
+When I should not be successfully logged in and I should not be able to see the product header.failed
+Then I should see a an error message about the problematic account..........skipped
+]]></system-out>
+</testcase>
+<testcase classname="Geolocation Functionality" name="As a User, I should be able to see the proper values in the Geolocation menu option" time="5.721">
+<failure type="org.junit.ComparisonFailure" message="The Latitude value is not correct for the particular user. expected:&lt;37.42[20936]&gt; but was:&lt;37.42[19983]&gt;">
+<![CDATA[org.junit.ComparisonFailure: The Latitude value is not correct for the particular user. expected:<37.42[20936]> but was:<37.42[19983]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at stepDefinitions.GeolocationSteps.checkLongitudeValue(GeolocationSteps.java:18)
+	at ✽.I should see Longitude value equals to "37.4219983"(file:///C:/Users/a932987/Downloads/sample-app-mobile-2.7.1/sample-app-mobile-2.7.1/Betsson_assignment_18_1_25/src/test/java/features/02_menu_Geolocation.feature:10)
+]]>
+</failure>
+<system-out><![CDATA[
+And I click the Geolocation menu option.....................................passed
+Then I should see Longitude value equals to "37.4219983"....................failed
+And I should see Latitude value equals to "-122.084"........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="User importing a URL to Web view option" name="Successful importing of URL to Web view menu option" time="10.087">
+<system-out><![CDATA[
+When I click the Web view menu option.......................................passed
+And I add a URL to the field................................................passed
+And I click the go to site button...........................................passed
+Then I should be able to redirect to the particular URL.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="User importing a URL to Web view option" name="Unsuccessful importing of URL to Web view menu option" time="5.907">
+<system-out><![CDATA[
+When I click the Web view menu option.......................................passed
+And I add an invalid URL to the field.......................................passed
+And I click the go to site button...........................................passed
+Then I should see an error message about the invalid URL....................passed
+]]></system-out>
+</testcase>
+<testcase classname="User add product to the basket and goes to checkout page." name="Remove the selection of the second product" time="11.983">
+<system-out><![CDATA[
+When I click to menu........................................................passed
+And I choose the all items option...........................................passed
+And I click to the second product...........................................passed
+And I scroll down and click to the add to card button.......................passed
+And I click to the basket in order to see my second product selected and the number 1 of it.passed
+Then I should see the remove button.........................................passed
+When I click to remove button and the product should be disappeared from the list.passed
+Then I click to the basket in order to see my selected product and the number -1 as a basket value.passed
+]]></system-out>
+</testcase>
+<testcase classname="User add product to the basket and goes to checkout page." name="Check buy process of the 2nd product with proper basket value" time="36.934">
+<failure type="org.junit.ComparisonFailure" message="The success message of the checkout is not the expected expected:&lt;[THANK YOU FOR YOU ORDER]&gt; but was:&lt;[]&gt;">
+<![CDATA[org.junit.ComparisonFailure: The success message of the checkout is not the expected expected:<[THANK YOU FOR YOU ORDER]> but was:<[]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at stepDefinitions.ProductsSteps.checkTheSuccessfulMsgOfThePurchase(ProductsSteps.java:67)
+	at ✽.I should see the successful message of my purchase(file:///C:/Users/a932987/Downloads/sample-app-mobile-2.7.1/sample-app-mobile-2.7.1/Betsson_assignment_18_1_25/src/test/java/features/04_products.feature:25)
+]]>
+</failure>
+<system-out><![CDATA[
+When I click to menu........................................................passed
+And I choose the all items option...........................................passed
+And I click to the second product...........................................passed
+And I scroll down and click to the add to card button.......................passed
+Then I should see the remove button.........................................passed
+And I click to the basket in order to see my selected product and the number 1 as a basket value.passed
+When I click to checkout button.............................................passed
+And I fill the required fields anc click the finish button..................passed
+And I should see the successful message of my purchase......................failed
+]]></system-out>
+</testcase>
+<testcase classname="User add product to the basket and goes to checkout page." name="Check buy process of the 3nd product with not proper basket value" time="8.96">
+<system-out><![CDATA[
+When I click to menu........................................................passed
+And I choose the all items option...........................................passed
+And I click to the third product............................................passed
+And I scroll down and click to the add to card button.......................passed
+Then I should see the remove button.........................................passed
+And I click to the basket in order to see my second product and the number 2 as a basket value.passed
+]]></system-out>
+</testcase>
+<testcase classname="User add product to the basket and goes to checkout page." name="Select the second product and the go back to all products" time="5.771">
+<system-out><![CDATA[
+When I click to menu........................................................passed
+And I choose the all items option...........................................passed
+And I click to the second product...........................................passed
+When I click the back to products button....................................passed
+Then I should be able to see the second product.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User add product to the basket and goes to checkout page." name="Verify sorting" time="5.242">
+<system-out><![CDATA[
+When I click to menu........................................................passed
+And I choose the all items option...........................................passed
+And I click to sorting icon.................................................passed
+Then I see the price with "7.99" should be sorted as first..................passed
+]]></system-out>
+</testcase>
+</testsuite>

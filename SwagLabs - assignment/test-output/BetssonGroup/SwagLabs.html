@@ -1,0 +1,1393 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Extent</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Grasshopper Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Jan 23, 2025 03:55:16 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@Smoke</a><a class="dropdown-item" href="#">@Regression</a><a class="dropdown-item" href="#">@ErrorMessage</a><a class="dropdown-item" href="#">@Login</a><a class="dropdown-item" href="#">@SuccessfullyLogin</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">User Login</p>
+            <p class="text-sm">
+              <span>3:55:27 PM</span> / <span>00:00:19:195</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">User Login</h5>
+<span class='badge badge-success'>01.23.2025 3:55:27 PM</span>
+<span class='badge badge-danger'>01.23.2025 3:55:46 PM</span>
+<span class='badge badge-default'>00:00:19:195</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a user
+I want to log in to my account
+So that I can access the application features</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Successful login with valid credentials</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.fillTheLoginFields()">
+                <span>When I launch the app and I use the standard user</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.clickLoginButton()">
+                <span>And I click the log in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.testSuccessfullyLogin()">
+                <span>Then I should be successfully logged in and I should see the product header</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="8"><span class="badge log pass-bg mr-2">Pass</span>Successful login with invalid credentials</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.fillTheLoginFieldsForLockedUser()">
+                <span>When I launch the app and I use the locked user</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.clickLoginButton()">
+                <span>And I click the log in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.testUnsuccessfullyLogin()">
+                <span>When I should not be successfully logged in and I should not be able to see the product header</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.errorMsgForLockedAcc()">
+                <span>Then I should see a an error message about the locked account</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="14"><span class="badge log fail-bg mr-2">Fail</span>Successful login with invalid credentials - problematic account</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.fillTheLoginFieldsForProblemUser()">
+                <span>When I launch the app and I use the problematic user</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.LoginSteps.clickLoginButton()">
+                <span>And I click the log in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinitions.LoginSteps.testUnsuccessfullyLogin()">
+                <span>When I should not be successfully logged in and I should not be able to see the product header</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: The card should be visible after successful login.
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at stepDefinitions.LoginSteps.testUnsuccessfullyLogin(LoginSteps.java:31)
+	at ✽.I should not be successfully logged in and I should not be able to see the product header(file:///C:/Users/a932987/Downloads/sample-app-mobile-2.7.1/sample-app-mobile-2.7.1/Betsson_assignment_18_1_25/src/test/java/features/01_login.feature:25)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.LoginSteps.errorMsgForProblematicAcc()">
+                <span>Then I should see a an error message about the problematic account</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>hooks.Hooks.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Successful login with invalid credentials - problematic account
+          <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='../embedded1.png' src="../embedded1.png">
+  
+    
+
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="20"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Geolocation Functionality</p>
+            <p class="text-sm">
+              <span>3:55:46 PM</span> / <span>00:00:05:720</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Geolocation Functionality</h5>
+<span class='badge badge-success'>01.23.2025 3:55:46 PM</span>
+<span class='badge badge-danger'>01.23.2025 3:55:52 PM</span>
+<span class='badge badge-default'>00:00:05:720</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a user
+I want to log in to my account and check my Geolocation
+amd I should be able to see the Longitude & Latitude values</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="21"><span class="badge log fail-bg mr-2">Fail</span>As a User, I should be able to see the proper values in the Geolocation menu option</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.GeolocationSteps.clickGeolocationFromMenu()">
+                <span>And I click the Geolocation menu option</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinitions.GeolocationSteps.checkLongitudeValue(java.lang.String)">
+                <span>Then I should see Longitude value equals to "37.4219983"</span>
+      <div>
+        <textarea disabled class="code-block">org.junit.ComparisonFailure: The Latitude value is not correct for the particular user. expected:<37.42[20936]> but was:<37.42[19983]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at stepDefinitions.GeolocationSteps.checkLongitudeValue(GeolocationSteps.java:18)
+	at ✽.I should see Longitude value equals to "37.4219983"(file:///C:/Users/a932987/Downloads/sample-app-mobile-2.7.1/sample-app-mobile-2.7.1/Betsson_assignment_18_1_25/src/test/java/features/02_menu_Geolocation.feature:10)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="stepDefinitions.GeolocationSteps.checkLatitudeValue(java.lang.String)">
+                <span>And I should see Latitude value equals to "-122.084"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>hooks.Hooks.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>As a User, I should be able to see the proper values in the Geolocation menu option
+          <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='../embedded2.png' src="../embedded2.png">
+  
+    
+
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="26"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">User importing a URL to Web view option</p>
+            <p class="text-sm">
+              <span>3:55:52 PM</span> / <span>00:00:16:006</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">User importing a URL to Web view option</h5>
+<span class='badge badge-success'>01.23.2025 3:55:52 PM</span>
+<span class='badge badge-danger'>01.23.2025 3:56:08 PM</span>
+<span class='badge badge-default'>00:00:16:006</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a user
+I want to log in to my account
+Open menu and go to web view sub option</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="27"><span class="badge log pass-bg mr-2">Pass</span>Successful importing of URL to Web view menu option</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.WebViewSteps.clickWebViewOption()">
+                <span>When I click the Web view menu option</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.WebViewSteps.addUrl()">
+                <span>And I add a URL to the field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.WebViewSteps.clickGoToSiteBtn()">
+                <span>And I click the go to site button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.WebViewSteps.checkSuccessfulImportFromUrl()">
+                <span>Then I should be able to redirect to the particular URL</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="33"><span class="badge log pass-bg mr-2">Pass</span>Unsuccessful importing of URL to Web view menu option</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.WebViewSteps.clickWebViewOption()">
+                <span>When I click the Web view menu option</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.WebViewSteps.addInvalidUrl()">
+                <span>And I add an invalid URL to the field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.WebViewSteps.clickGoToSiteBtn()">
+                <span>And I click the go to site button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.WebViewSteps.errorMsgForInvalidUrl()">
+                <span>Then I should see an error message about the invalid URL</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="39"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">User add product to the basket and goes to checkout page.</p>
+            <p class="text-sm">
+              <span>3:56:08 PM</span> / <span>00:01:08:928</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">User add product to the basket and goes to checkout page.</h5>
+<span class='badge badge-success'>01.23.2025 3:56:08 PM</span>
+<span class='badge badge-danger'>01.23.2025 3:57:17 PM</span>
+<span class='badge badge-default'>00:01:08:928</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=39</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="40"><span class="badge log pass-bg mr-2">Pass</span>Remove the selection of the second product</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.clickToMenu()">
+                <span>When I click to menu</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.clickToAllItems()">
+                <span>And I choose the all items option</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.clickToTheSecondProduct()">
+                <span>And I click to the second product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.scrollToAddCardBtn()">
+                <span>And I scroll down and click to the add to card button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.checkTheUpdatedValueInTheBasketForTheSecondProduct(int)">
+                <span>And I click to the basket in order to see my second product selected and the number 1 of it</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.checkRemoveButtonVisibility()">
+                <span>Then I should see the remove button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.removeProductFromTheList()">
+                <span>When I click to remove button and the product should be disappeared from the list</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.checkTheUpdatedValueInTheBasket(int)">
+                <span>Then I click to the basket in order to see my selected product and the number -1 as a basket value</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="50"><span class="badge log fail-bg mr-2">Fail</span>Check buy process of the 2nd product with proper basket value</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.clickToMenu()">
+                <span>When I click to menu</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.clickToAllItems()">
+                <span>And I choose the all items option</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.clickToTheSecondProduct()">
+                <span>And I click to the second product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.scrollToAddCardBtn()">
+                <span>And I scroll down and click to the add to card button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.checkRemoveButtonVisibility()">
+                <span>Then I should see the remove button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.checkTheUpdatedValueInTheBasket(int)">
+                <span>And I click to the basket in order to see my selected product and the number 1 as a basket value</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.clickToCheckOut()">
+                <span>When I click to checkout button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.fillTheRequiredFields()">
+                <span>And I fill the required fields anc click the finish button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="stepDefinitions.ProductsSteps.checkTheSuccessfulMsgOfThePurchase()">
+                <span>And I should see the successful message of my purchase</span>
+      <div>
+        <textarea disabled class="code-block">org.junit.ComparisonFailure: The success message of the checkout is not the expected expected:<[THANK YOU FOR YOU ORDER]> but was:<[]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at stepDefinitions.ProductsSteps.checkTheSuccessfulMsgOfThePurchase(ProductsSteps.java:67)
+	at ✽.I should see the successful message of my purchase(file:///C:/Users/a932987/Downloads/sample-app-mobile-2.7.1/sample-app-mobile-2.7.1/Betsson_assignment_18_1_25/src/test/java/features/04_products.feature:25)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>hooks.Hooks.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Check buy process of the 2nd product with proper basket value
+          <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='../embedded3.png' src="../embedded3.png">
+  
+    
+
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="61"><span class="badge log pass-bg mr-2">Pass</span>Check buy process of the 3nd product with not proper basket value</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.clickToMenu()">
+                <span>When I click to menu</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.clickToAllItems()">
+                <span>And I choose the all items option</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.clickToTheThirdProduct()">
+                <span>And I click to the third product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.scrollToAddCardBtn()">
+                <span>And I scroll down and click to the add to card button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.checkRemoveButtonVisibility()">
+                <span>Then I should see the remove button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.checkTheUpdatedBasketValue(int)">
+                <span>And I click to the basket in order to see my second product and the number 2 as a basket value</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="69"><span class="badge log pass-bg mr-2">Pass</span>Select the second product and the go back to all products</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.clickToMenu()">
+                <span>When I click to menu</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.clickToAllItems()">
+                <span>And I choose the all items option</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.clickToTheSecondProduct()">
+                <span>And I click to the second product</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.clickToBackToAllProducts()">
+                <span>When I click the back to products button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.checkVisibilityOfTheProd()">
+                <span>Then I should be able to see the second product</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="76"><span class="badge log pass-bg mr-2">Pass</span>Verify sorting</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.clickToMenu()">
+                <span>When I click to menu</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.clickToAllItems()">
+                <span>And I choose the all items option</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.clickToSortingIcon()">
+                <span>And I click to sorting icon</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.ProductsSteps.checkSortingLowToHigh(java.lang.String)">
+                <span>Then I see the price with "7.99" should be sorted as first</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:55:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='17'>When I should not be successfully logged in and I should not be able to see the product header</a>
+<div class="">
+<span class="badge badge-default">User Login.Successful login with invalid credentials - problematic account.When I should not be successfully logged in and I should not be able to see the product header</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">org.junit.ComparisonFailure</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.junit.ComparisonFailure</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:55:49 PM</td>
+<td>
+<a href="#" class="linked" test-id='20' id='23'>Then I should see Longitude value equals to "37.4219983"</a>
+<div class="">
+<span class="badge badge-default">Geolocation Functionality.As a User, I should be able to see the proper values in the Geolocation menu option.Then I should see Longitude value equals to "37.4219983"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:56:41 PM</td>
+<td>
+<a href="#" class="linked" test-id='39' id='59'>And I should see the successful message of my purchase</a>
+<div class="">
+<span class="badge badge-default">User add product to the basket and goes to checkout page..Check buy process of the 2nd product with proper basket value.And I should see the successful message of my purchase</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">5</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>6</span>
+<span class='badge log badge-danger'>3</span>
+</span>
+<p class="name">@Smoke</p>
+<p class="duration text-sm">9 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Smoke</h4>
+<span status="pass" class='badge log pass-bg'>6 passed</span>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:55:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Successful login with valid credentials</a>
+<div class="">
+<span class="badge badge-default">User Login.Successful login with valid credentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:55:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='8'>Successful login with invalid credentials</a>
+<div class="">
+<span class="badge badge-default">User Login.Successful login with invalid credentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:55:42 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='14'>Successful login with invalid credentials - problematic account</a>
+<div class="">
+<span class="badge badge-default">User Login.Successful login with invalid credentials - problematic account</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:55:46 PM</td>
+<td>
+<a href="#" class="linked" test-id='20' id='21'>As a User, I should be able to see the proper values in the Geolocation menu option</a>
+<div class="">
+<span class="badge badge-default">Geolocation Functionality.As a User, I should be able to see the proper values in the Geolocation menu option</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:56:08 PM</td>
+<td>
+<a href="#" class="linked" test-id='39' id='40'>Remove the selection of the second product</a>
+<div class="">
+<span class="badge badge-default">User add product to the basket and goes to checkout page..Remove the selection of the second product</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:56:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='39' id='50'>Check buy process of the 2nd product with proper basket value</a>
+<div class="">
+<span class="badge badge-default">User add product to the basket and goes to checkout page..Check buy process of the 2nd product with proper basket value</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:56:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='39' id='61'>Check buy process of the 3nd product with not proper basket value</a>
+<div class="">
+<span class="badge badge-default">User add product to the basket and goes to checkout page..Check buy process of the 3nd product with not proper basket value</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:57:06 PM</td>
+<td>
+<a href="#" class="linked" test-id='39' id='69'>Select the second product and the go back to all products</a>
+<div class="">
+<span class="badge badge-default">User add product to the basket and goes to checkout page..Select the second product and the go back to all products</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:57:11 PM</td>
+<td>
+<a href="#" class="linked" test-id='39' id='76'>Verify sorting</a>
+<div class="">
+<span class="badge badge-default">User add product to the basket and goes to checkout page..Verify sorting</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>8</span>
+<span class='badge log badge-danger'>3</span>
+</span>
+<p class="name">@Regression</p>
+<p class="duration text-sm">11 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Regression</h4>
+<span status="pass" class='badge log pass-bg'>8 passed</span>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:55:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Successful login with valid credentials</a>
+<div class="">
+<span class="badge badge-default">User Login.Successful login with valid credentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:55:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='8'>Successful login with invalid credentials</a>
+<div class="">
+<span class="badge badge-default">User Login.Successful login with invalid credentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:55:42 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='14'>Successful login with invalid credentials - problematic account</a>
+<div class="">
+<span class="badge badge-default">User Login.Successful login with invalid credentials - problematic account</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:55:46 PM</td>
+<td>
+<a href="#" class="linked" test-id='20' id='21'>As a User, I should be able to see the proper values in the Geolocation menu option</a>
+<div class="">
+<span class="badge badge-default">Geolocation Functionality.As a User, I should be able to see the proper values in the Geolocation menu option</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:55:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='26' id='27'>Successful importing of URL to Web view menu option</a>
+<div class="">
+<span class="badge badge-default">User importing a URL to Web view option.Successful importing of URL to Web view menu option</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:56:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='26' id='33'>Unsuccessful importing of URL to Web view menu option</a>
+<div class="">
+<span class="badge badge-default">User importing a URL to Web view option.Unsuccessful importing of URL to Web view menu option</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:56:08 PM</td>
+<td>
+<a href="#" class="linked" test-id='39' id='40'>Remove the selection of the second product</a>
+<div class="">
+<span class="badge badge-default">User add product to the basket and goes to checkout page..Remove the selection of the second product</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:56:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='39' id='50'>Check buy process of the 2nd product with proper basket value</a>
+<div class="">
+<span class="badge badge-default">User add product to the basket and goes to checkout page..Check buy process of the 2nd product with proper basket value</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:56:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='39' id='61'>Check buy process of the 3nd product with not proper basket value</a>
+<div class="">
+<span class="badge badge-default">User add product to the basket and goes to checkout page..Check buy process of the 3nd product with not proper basket value</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:57:06 PM</td>
+<td>
+<a href="#" class="linked" test-id='39' id='69'>Select the second product and the go back to all products</a>
+<div class="">
+<span class="badge badge-default">User add product to the basket and goes to checkout page..Select the second product and the go back to all products</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:57:11 PM</td>
+<td>
+<a href="#" class="linked" test-id='39' id='76'>Verify sorting</a>
+<div class="">
+<span class="badge badge-default">User add product to the basket and goes to checkout page..Verify sorting</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@ErrorMessage</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ErrorMessage</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:55:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='8'>Successful login with invalid credentials</a>
+<div class="">
+<span class="badge badge-default">User Login.Successful login with invalid credentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:55:42 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='14'>Successful login with invalid credentials - problematic account</a>
+<div class="">
+<span class="badge badge-default">User Login.Successful login with invalid credentials - problematic account</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@Login</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Login</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:55:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Successful login with valid credentials</a>
+<div class="">
+<span class="badge badge-default">User Login.Successful login with valid credentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:55:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='8'>Successful login with invalid credentials</a>
+<div class="">
+<span class="badge badge-default">User Login.Successful login with invalid credentials</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:55:42 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='14'>Successful login with invalid credentials - problematic account</a>
+<div class="">
+<span class="badge badge-default">User Login.Successful login with invalid credentials - problematic account</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@SuccessfullyLogin</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@SuccessfullyLogin</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:55:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Successful login with valid credentials</a>
+<div class="">
+<span class="badge badge-default">User Login.Successful login with valid credentials</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jan 23, 2025 03:55:16 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jan 23, 2025 03:57:17 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>1</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>3</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='25%'>
+<b>1</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='75%'><b>3</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='72%'><b>8</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='27%'><b>3</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='91%'><b>52</b> steps passed</small></div>
+<div>
+<small data-tooltip='5%'><b>3</b> steps failed,
+<b>2</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"User Login":19.195,"Geolocation Functionality":5.72,"User importing a URL to Web view option":16.006,"User add product to the basket and goes to checkout page.":68.928
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@Smoke</td>
+<td>6</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>66.667%</td>
+</tr>
+<tr>
+<td>@Regression</td>
+<td>8</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>72.727%</td>
+</tr>
+<tr>
+<td>@ErrorMessage</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>@Login</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>66.667%</td>
+</tr>
+<tr>
+<td>@SuccessfullyLogin</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 1,
+failParent: 3,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 8,
+failChild: 3,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 52,
+failGrandChild: 3,
+warningGrandChild: 0,
+skipGrandChild: 2,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c05cd28cde1617b9d0c05a831daff6cb97fd9fd5/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
